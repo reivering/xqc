@@ -1,0 +1,717 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: black;
+  color: #333;
+  padding-left: 80px; /* Adjust for sidebar width */
+}
+
+#main-content{
+  width: 100%;
+}
+
+/* Header Carousel */
+.header-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  }
+  
+  .header-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  }
+  
+  .header-slide {
+  min-width: 100%;
+  height: 1000%;
+  }
+  
+  .header-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+  
+  .header-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 100;
+  padding: 10px;
+  border-radius: 50%;
+  }
+  
+  .header-button.left {
+  left: 10px;
+  }
+  
+  .header-button.right {
+  right: 10px;
+  }
+
+
+
+/* Overlay container */
+.header-overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px; /* Space between buttons */
+opacity: 0; /* Hidden by default */
+transition: opacity 0.3s ease-in-out; /* Smooth transition */
+z-index: 10;
+}
+
+/* Buttons inside the overlay */
+.header-overlay button {
+padding: 10px 20px;
+font-size: 1rem;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: transform 0.2s ease;
+}
+
+.trailer-btn {
+background-color: white;
+color: black;
+}
+
+.watch-btn {
+background-color: rgba(0, 128, 0, 0.834);
+color: white;
+border: 10px solid rgba(255, 255, 255, 0.834);
+}
+
+.header-overlay button:hover {
+transform: scale(1.1); /* Slightly enlarge buttons on hover */
+}
+
+/* Show overlay on hover */
+.header-slide:hover .header-overlay {
+opacity: 1;
+}
+
+.layout {
+  display: flex;
+   /* Flex layout to separate sidebar and content */
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px; /* Sidebar width */
+  height: 100%; /* Full viewport height */
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+.sidebar .top-menu,
+.sidebar .bottom-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.menu-item i {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.menu-item:hover {
+  color: #4caf50; /* Highlight color */
+}
+
+.menu-item span {
+  font-size: 0.8rem;
+}
+
+.main-content {
+  margin-left: 80px; /* Same width as the sidebar */
+  padding: 20px;
+  width: calc(100% - 80px); /* Adjust main content width */
+  background-color: #f4f4f4;
+  min-height: 100vh; /* Ensure it fills the viewport */
+}
+
+.bottom-menu {
+  margin-bottom: 20px;
+}
+
+
+header {
+  color: white;;
+  text-align: center;
+  width: auto;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: green;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  overflow-block: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-card {
+  min-width: 300px;
+  margin-right: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  flex: 0 0 auto; /* Prevent cards from resizing */
+  width: calc(100% / 6); /* Ensure 6 cards fit within the viewport */
+  max-width: 250px; /* Add a max-width for responsiveness */
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-card:hover {
+  transform: scale(1.05);
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f4f4f952;
+  color: black;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 100;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+/*
+.carousel-track {
+  display: flex;
+  gap: 10px; 
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-card {
+  flex: 0 0 16.666%; 
+  display: none; 
+}
+
+.carousel-card:not([style*="display: none"]) {
+  display: block; 
+}*/
+
+footer {
+  background: #000000;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#ContentWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200vh;
+}
+
+/* Search Bar */
+.search-bar {
+margin-left: auto;
+position: relative;
+padding-right: 100vh;
+margin-left: 20px;
+padding-bottom: 20px;
+padding-top: 20px;
+}
+
+.search-bar input {
+padding: 5px 10px;
+border: 1px solid #ccc;
+border-radius: 20px;
+outline: none;
+font-size: 1rem;
+transition: border-color 0.3s ease;
+background-color: #1a1a1a;
+color: white;
+}
+
+.search-bar input:focus {
+border-color: green;
+}
+
+
+/*
+@media (min-width: 1200px) {
+.header-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 400px; 
+}
+
+.header-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.header-slide {
+  min-width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+.header-slide img {
+  width: 100%;
+  height: 800vh;
+  object-fit: cover;
+}
+
+}
+
+
+
+@media (min-width: 1920px) {
+.header-carousel {
+  height: 400px;
+}
+
+.header-slide {
+  height: 400px;
+}
+
+.header-slide img {
+  height: 1000px;
+}
+
+
+.header-slide h1 {
+  font-size: 3rem; 
+}
+
+.header-slide button {
+  padding: 15px 30px;
+  font-size: 1.5rem; 
+}
+}
+
+@media (max-width: 768px) {
+
+header {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+
+.header-carousel {
+  margin-top: 2px; 
+  height: 400px; 
+  width: 900px;
+}
+
+.header-slide img {
+  height: 100; 
+  object-fit: cover;
+}
+
+
+.carousel-card {
+  flex: 0 0 50%; 
+  margin-right: 10px; 
+}
+
+.carousel-track {
+  gap: 5px; 
+}
+
+
+footer {
+  font-size: 0.8rem; 
+  padding: 5px 0;
+  text-align: center;
+  width: 100%;
+}
+
+
+.search-bar {
+  top: 5px; 
+  right: 15px; 
+  width: auto; 
+  padding-left: 15px;
+}
+
+.search-bar input {
+  width: 200px; 
+  font-size: 0.9rem;
+}
+
+.header-overlay button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+}
+
+@media (max-width: 576px) {
+
+header {
+  text-align: center;
+  padding: 10px 20px;
+  width: 500px;
+}
+
+.header-carousel {
+  height: 400px;
+  
+}
+
+.header-slide img {
+  height: 400px; 
+  object-fit: cover;
+}
+
+
+.carousel-card {
+  flex: 0 0 100%; 
+  margin-right: 5px;
+}
+
+
+footer {
+  padding: 5px;
+  font-size: 0.7rem;
+  width: 100%;
+}
+
+
+.search-bar {
+  top: 10px; 
+  right: 17px; 
+  width: 100%; 
+  text-align: left; 
+  padding-right: 200px;
+}
+
+.search-bar input {
+  width: 90%; 
+  font-size: 0.8rem; 
+}
+}
+*/
+
+/* Media Query for TVs (Ultra-Wide Screens, 1920px and above) */
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1600px; /* Expand the container for wide screens */
+  }
+
+  .carousel-card {
+    min-width: 20%; /* Show more cards per row */
+  }
+
+  header h1 {
+    font-size: 4rem; /* Increase font size for TV display */
+  }
+
+  .search-bar {
+    padding: 20px;
+    font-size: 1.5rem; /* Larger search bar for readability */
+  }
+
+  .bottom-nav {
+    display: none; /* Hide bottom navigation on desktop */
+    color: #1a1a1a;
+  }
+  .nav-item {
+    display: none; /* Hide bottom navigation items */
+    color: #1a1a1a;
+  }
+}
+
+/* Media Query for Desktops (1200px - 1920px) */
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .carousel-card {
+    min-width: calc(100% / 5); /* Show 5 cards per row */
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+  
+  .bottom-nav {
+    display: none; /* Hide bottom navigation on desktop */
+    color: #1a1a1a;
+  }
+  .nav-item {
+    display: none; /* Hide bottom navigation items */
+    color: #1a1a1a;
+  }
+}
+
+/* Media Query for Tablets (768px - 1199px) */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  body {
+    padding-left: 50px; /* Adjust padding for sidebar */
+  }
+
+  .sidebar {
+    width: 50px; /* Narrower sidebar */
+  }
+
+  .carousel-card {
+    min-width: calc(100% / 3); /* Show 3 cards per row */
+  }
+
+  .search-bar {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-overlay button {
+    padding: 8px 15px; /* Reduce button size */
+    font-size: 0.9rem;
+  }
+  .bottom-nav {
+    display: none; /* Hide bottom navigation on desktop */
+    color: #1a1a1a;
+  }
+  .nav-item {
+    display: none; /* Hide bottom navigation items */
+    color: #1a1a1a;
+  }
+}
+
+/* Media Query for Smartphones (320px - 767px) */
+@media screen and (max-width: 767px) {
+  body {
+    padding-left: 0; /* Remove sidebar padding */
+  }
+
+  .sidebar {
+    display: none; /* Hide sidebar on smartphones */
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%; /* Full width content */
+  }
+
+  .carousel-card {
+    min-width: calc(100% / 2); /* Show 2 cards per row */
+  }
+
+  .header-carousel {
+    height: 400px; /* Adjust height of the hero section */
+  }
+
+  .header-overlay button {
+    padding: 5px 10px;
+    font-size: 0.8rem; /* Smaller buttons */
+  }
+
+  .search-bar {
+    padding-right: 5px;
+  }
+
+  .search-bar input {
+    width: 80%; /* Reduce search bar width */
+    font-size: 0.9rem;
+  }
+
+  header h1 {
+    font-size: 2rem; /* Smaller heading for smartphones */
+  }
+
+  footer {
+    font-size: 0.9rem; /* Smaller footer text */
+  }
+
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #000000; /* Dark background */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #444; /* Optional border for separation */
+    z-index: 1000;
+  }
+
+  .bottom-nav .nav-item {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem; /* Adjust font size for mobile */
+    transition: color 0.3s ease;
+  }
+
+  .bottom-nav .nav-item i {
+    font-size: 1.4rem; /* Icon size */
+    margin-bottom: 2px; /* Space between icon and text */
+  }
+
+  .bottom-nav .nav-item:hover {
+    color: #4caf50; /* Highlight color on hover */
+  }
+
+  body {
+    padding-bottom: 60px; /* Add space to prevent content overlap */
+  }
+}
+
+@media screen and (max-width: 550px) {
+  /* General body adjustments */
+  body {
+    padding-left: 0; /* Remove sidebar padding */
+  }
+
+  /* Sidebar adjustments */
+  .sidebar {
+    width: 60px; /* Reduce sidebar width */
+  }
+
+  .menu-item i {
+    font-size: 1.2rem; /* Reduce icon size */
+  }
+
+  .menu-item span {
+    font-size: 0.7rem; /* Adjust text size */
+  }
+
+  /* Header carousel adjustments */
+  .header-carousel {
+    height: 320px; /* Adjust height of the hero section */
+  }
+
+  .header-slide img {
+    height: auto; /* Ensure proper scaling */
+  }
+
+  .header-overlay {
+    gap: 10px; /* Reduce spacing between buttons */
+  }
+
+  /* Container adjustments */
+  .container {
+    padding: 10px;
+  }
+
+  /* Carousel adjustments */
+  .carousel-card {
+    width: calc(100% - 10px); /* Single card in viewport */
+    max-width: none; /* Remove max-width for better scaling */
+  }
+
+  .carousel-button {
+    font-size: 1.5rem; /* Reduce button size */
+  }
+
+  /* Search bar adjustments */
+  .search-bar {
+    padding-right: 20px; /* Adjust spacing */
+    margin-left: 0;
+    padding-bottom: 10px;
+    padding-top: 1px;
+  }
+
+  .search-bar input {
+    font-size: 0.9rem; /* Smaller input font */
+  }
+
+  /* Footer adjustments */
+  footer {
+    font-size: 0.9rem;
+  }
+}

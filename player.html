@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hashim - Sidebar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="player.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <img src="logo.png" alt="Logo">
+      <input type="text" placeholder="Search">
+    </div>
+    <ul>
+      <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#"><i class="fas fa-film"></i> Movies</a></li>
+      <li><a href="#"><i class="fas fa-tv"></i> TV Shows</a></li>
+      <li><a href="#"><i class="fas fa-theater-masks"></i> K Drama</a></li>
+      <li><a href="#"><i class="fas fa-dragon"></i> Anime</a></li>
+      <li><a href="#"><i class="fas fa-book"></i> Manga</a></li>
+      <li><a href="#"><i class="fas fa-broadcast-tower"></i> Live TV</a></li>
+      <li><a href="#"><i class="fas fa-history"></i> History</a></li>
+      <li><a href="#"><i class="fas fa-bookmark"></i> Watchlist</a></li>
+      <li><a href="#"><i class="fas fa-cogs"></i> Settings</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="header">
+      <h1>Cross</h1>
+      <div class="controls">
+        <button><i class="fa fa-backward"></i></button>
+        <button><i class="fa fa-play"></i></button>
+        <button><i class="fa fa-forward"></i></button>
+      </div>
+      <div class="time" id="timestamp">00:00:00 / 01:02:35</div>
+    </div>
+
+    <div class="video-player">
+      <video id="myVideo" controls>
+        <source src="MyVideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="details">
+      <div class="info">
+        <p>Season 1</p>
+        <p>Ep. No.</p>
+      </div>
+      <ul>
+        <li>Hero Complex</li>
+        <li>Ride the White Horse</li>
+        <li>The Good Book</li>
+        <li>Masks</li>
+        <li>What Happens at Ramsey's</li>
+        <li>A Bang, Not a Whimper</li>
+        <li>Happy Birthday</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="player.js"></script>
+</body>
+</html>
