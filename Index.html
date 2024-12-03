@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Film Factory</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="stylesLP.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:wght@500&display=swap" rel="stylesheet">
@@ -13,10 +13,10 @@
 
 </head>
 <body>
-
+  <!-- Navigation Bar -->
   <nav>
     <div class="wrapper">
-
+      <!-- Sidebar Wrapper -->
       <div class="sidebar-wrapper">
         <div class="sidebar">
           <div class="top-menu">
@@ -38,11 +38,15 @@
             </a>
           </div>
           <div class="bottom-menu">
-            <a href="#watchlist" class="menu-item">
-              <i class="fas fa-sign-in-alt"></i>
-              <span>Login</span>
+            <a href="#history" class="menu-item">
+              <i class="fas fa-history"></i>
+              <span>History</span>
             </a>
-            <a href="user.html" class="menu-item">
+            <a href="#watchlist" class="menu-item">
+              <i class="fas fa-bookmark"></i>
+              <span>Watchlist</span>
+            </a>
+            <a href="#profile" class="menu-item">
               <i class="fas fa-user"></i>
               <span>Profile</span>
             </a>
@@ -52,30 +56,19 @@
   </nav>
   
   
+  <!-- Hero Section with Carousel -->
   <div id="main-content"> 
   <header>
     <div class="header-carousel">
       <div class="header-track">
         <div class="header-slide">
-          <img src="Image/Wild Robot Banner.jpg" alt="Movie 1">
-          <div class="header-overlay">
-            <button class="trailer-btn">Trailer</button>
-            <button class="watch-btn">Watch</button>
-          </div>
+          <a href="https://youtu.be/67vbA5ZJdKQ"><img src="Image/Wild Robot Banner.jpg" alt="Movie 1"></a>
         </div>
         <div class="header-slide">
-          <img src="Image/Crazy Rich Asians Banner.jpg" alt="Movie 2">
-          <div class="header-overlay">
-            <button class="trailer-btn">Trailer</button>
-            <button class="watch-btn">Watch</button>
-          </div>
+          <a href="https://youtu.be/ZQ-YX-5bAs0"><img src="Image/Crazy Rich Asians Banner.jpg" alt="Movie 2"></a>
         </div>
         <div class="header-slide">
-          <img src="Image/Muse Banner.jpg" alt="Movie 3">
-          <div class="header-overlay">
-            <button class="trailer-btn">Trailer</button>
-            <button class="watch-btn">Watch</button>
-          </div>
+          <a href="https://youtu.be/rLl_NDatN8Q"><img src="Image/Muse Banner.jpg" alt="Movie 3"></a>
         </div>
       </div>
       <button class="header-button left">&lt;</button>
@@ -88,42 +81,32 @@
 
   <div class="container">
     
+    <!-- Action Movies -->
     <section id="movies">
       <h2>Movies</h2>
       <div class="carousel">
         <button class="carousel-button left">&lt;</button>
         <div class="carousel-track">
-
+          <!-- Movie Cards -->
           <div class="carousel-card">
             <img src="Image/Fall Guy.jpeg" alt="Fall Guy">
-            <div class="info">
-            </div>
           </div>
           <div class="carousel-card">
-            <img src="Image/Gladiator 2.jpeg" alt="Gladiator 2">
-            <div class="info">
-            </div>
+            <img src="Image/Hit Man.jpeg" alt="Hitman">
           </div>
           <div class="carousel-card">
-            <img src="Image/Gladiator.jpeg" alt="Gladiator">
-            <div class="info">
-            </div>
+            <img src="Image/Oppenheimer.jpeg" alt="Oppenheimer">
           </div>
           <div class="carousel-card">
-            <img src="Image/Monkey Man.jpg" alt="Monkey Man">
-            <div class="info">
-            </div>
+            <img src="Image/Monkey Man.jpeg" alt="Monkey Man">
           </div>
           <div class="carousel-card">
             <img src="Image/Wild Robot.jpeg" alt="Wild Robot">
-            <div class="info">
-            </div>
           </div>
           <div class="carousel-card">
             <img src="Image/Transformer One.jpeg" alt="Transformer One">
-            <div class="info">
-            </div>
           </div>
+          
         </div>
         <button class="carousel-button right">&gt;</button>
       </div>
@@ -131,52 +114,30 @@
   </div>
 
   <div class="container">
-
+    <!-- Horror Movies -->
     <section id="anime">
       <h2>Anime</h2>
       <div class="carousel">
         <button class="carousel-button left">&lt;</button>
         <div class="carousel-track">
-
+          <!-- Movie Cards -->
           <div class="carousel-card">
-            <img src="Image/A Quiet Place.jpeg" alt="A Quiet Place">
-            <div class="info">
-            </div>
+            <img src="Image/One Piece.jpeg" alt="One Piece">
           </div>
           <div class="carousel-card">
-            <img src="Image/The Texas Chainsaw Massacre.jpeg" alt="The Texas Chainsaw Massacre">
-            <div class="info">
-              <h3>Action Movie 2</h3>
-              <p>A heroic journey against all odds.</p>
-            </div>
+            <img src="Image/Frieren.jpeg" alt="Frieren">
           </div>
           <div class="carousel-card">
-            <img src="Image/Van Helsing.jpeg" alt="Van Helsing">
-            <div class="info">
-              <h3>Wild Robot</h3>
-              <p>Explosive thrills and daring stunts.</p>
-            </div>
+            <img src="Image/Haikyuu.jpeg" alt="Haikyuu">
           </div>
           <div class="carousel-card">
-            <img src="Image/The Conjuring.jpeg" alt="Monkey Man">
-            <div class="info">
-              <h3>Wild Robot</h3>
-              <p>Explosive thrills and daring stunts.</p>
-            </div>
+            <img src="Image/Demon Slayer.jpeg" alt="Demon Slayer">
           </div>
           <div class="carousel-card">
-            <img src="Image/It.jpeg" alt="Wild Robot">
-            <div class="info">
-              <h3>Wild Robot</h3>
-              <p>Explosive thrills and daring stunts.</p>
-            </div>
+            <img src="Image/Vinland Saga.jpeg" alt="Vinland Saga">
           </div>
           <div class="carousel-card">
-            <img src="Image/Get Out.jpeg" alt="Transformer One">
-            <div class="info">
-              <h3>Wild Robot</h3>
-              <p>Explosive thrills and daring stunts.</p>
-            </div>
+            <img src="Image/Solo Leveling.jpeg" alt="Solo Leveling">
           </div>
         </div>
         <button class="carousel-button right">&gt;</button>
@@ -194,22 +155,22 @@
         <div class="carousel-track">
           <!-- Movie Cards -->
           <div class="carousel-card">
-            <img src="Image/Crazy Rich Asians.jpeg" alt="Action Movie 1">
+            <img src="Image/Breaking Bad.jpeg" alt="Breaking Bad">
           </div>
           <div class="carousel-card">
-            <img src="Image/Hit Man.jpeg" alt="Action Movie 2">
+            <img src="Image/FRIENDS.jpeg" alt="FRIENDS">
           </div>
           <div class="carousel-card">
-            <img src="Image/La La Land.jpeg" alt="Action Movie 2">
+            <img src="Image/Game Of Thrones.jpeg" alt="Game of Thrones">
           </div>
           <div class="carousel-card">
-            <img src="Image/A Star Is Born.jpeg" alt="Action Movie 2">
+            <img src="Image/The Last Dance.jpeg" alt="The Last Dance">
           </div>
           <div class="carousel-card">
-            <img src="Image/Pretty Woman.jpeg" alt="Action Movie 2">
+            <img src="Image/Warrior.jpeg" alt="Warrior">
           </div>
           <div class="carousel-card">
-            <img src="Image/Before Sunrise.jpeg" alt="Action Movie 2">
+            <img src="Image/DAREDEVIL.jpeg" alt="DAREDEVIL">
           </div>
         </div>
         <button class="carousel-button right">&gt;</button>
@@ -221,7 +182,7 @@
   </footer>
   </div>
 
-  <script src="script.js"></script>
+  <script src="scriptLP.js"></script>
   <!-- Bottom Navigation Bar -->
 <div class="bottom-nav">
   <a href="#home" class="nav-item">
