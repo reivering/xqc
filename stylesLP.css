@@ -16,7 +16,6 @@ body {
   width: 100%;
 }
 
-/* Header Carousel */
 .header-carousel {
   position: relative;
   overflow: hidden;
@@ -244,7 +243,7 @@ color: white;
 border-color: green;
 }
 
-/* Media Query for TVs (Ultra-Wide Screens, 1920px and above) */
+
 @media screen and (min-width: 1920px) {
   .container {
     max-width: 1600px; 
@@ -273,7 +272,7 @@ border-color: green;
   }
 }
 
-/* Media Query for Desktops (1200px - 1920px) */
+
 @media screen and (min-width: 1200px) and (max-width: 1919px) {
   .container {
     max-width: 1200px;
@@ -297,7 +296,7 @@ border-color: green;
   }
 }
 
-/* Media Query for Tablets (768px - 1199px) */
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   body {
     padding-left: 50px; 
@@ -334,7 +333,7 @@ border-color: green;
   }
 }
 
-/* Media Query for Smartphones (320px - 767px) */
+
 @media screen and (max-width: 767px) {
   body {
     padding-left: 0; 
